@@ -1,18 +1,18 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import api from "../../services/api";
+import api from '../../services/api';
 
-import Profile from "../../components/Profile";
-import Repos from "../../components/Repos";
+import Profile from '../../components/Profile';
+import Repos from '../../components/Repos';
 
-import { FaGithub } from "react-icons/fa";
+import { FaGithub } from 'react-icons/fa';
 
-import { Container, Form } from "./styles";
+import { Container, Form, Main } from './styles';
 
 class Home extends Component {
   state = {
     user: [],
-    repos: []
+    repos: [],
   };
 
   getUser = e => {
@@ -31,16 +31,16 @@ class Home extends Component {
     console.log(repos);
 
     return (
-      <div>
-        <div>
+      <Main>
+        <div className="profile">
           <Profile user={user} />
         </div>
-        <div>
+        <div className="repos">
           {repos.map(repos => (
             <Repos key={repos.name} repo={repos} />
           ))}
         </div>
-      </div>
+      </Main>
     );
   };
 

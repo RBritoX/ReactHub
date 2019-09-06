@@ -1,9 +1,9 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import { FaFolder, FaUsers, FaUserFriends } from "react-icons/fa";
+import { FaFolder, FaUsers, FaUserFriends } from 'react-icons/fa';
 
-import { Perfil, ListProfile } from "./styles";
+import { Perfil, ListProfile } from './styles';
 
 export default function Profile({ user }) {
   return (
@@ -34,7 +34,9 @@ export default function Profile({ user }) {
         </li>
       </ListProfile>
 
-      <Link to={user.html_url}>Ver Perfil</Link>
+      <Link to={user.html_url} target="_blank">
+        Ver Perfil
+      </Link>
     </Perfil>
   );
 }
