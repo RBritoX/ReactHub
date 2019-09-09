@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { darken } from "polished";
+import styled from 'styled-components';
+import { darken } from 'polished';
 
 export const Perfil = styled.div`
   display: flex;
@@ -8,6 +8,7 @@ export const Perfil = styled.div`
   align-items: center;
 
   width: 200px;
+  min-width: 100%;
   background: #fff;
   padding: 30px;
   border-radius: 10px;
@@ -16,7 +17,6 @@ export const Perfil = styled.div`
   img {
     width: 150px;
     height: 150px;
-    margin-bottom: 30px;
   }
 
   a {
@@ -28,9 +28,17 @@ export const Perfil = styled.div`
     border-radius: 10px;
 
     &:hover {
-      background: ${darken(0.05, "#eee")};
+      background: ${darken(0.05, '#eee')};
       font-weight: bold;
     }
+  }
+`;
+
+export const Bio = styled.div`
+  margin: 20px 0;
+
+  h1 {
+    font-size: 20px;
   }
 `;
 

@@ -3,13 +3,16 @@ import { Link } from 'react-router-dom';
 
 import { FaFolder, FaUsers, FaUserFriends } from 'react-icons/fa';
 
-import { Perfil, ListProfile } from './styles';
+import { Perfil, ListProfile, Bio } from './styles';
 
 export default function Profile({ user }) {
   return (
     <Perfil>
       <img src={user.avatar_url} alt="avatar" />
 
+      <Bio>
+        <h1>{user.name}</h1>
+      </Bio>
       <ListProfile>
         <li>
           <p>

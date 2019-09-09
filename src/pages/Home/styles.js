@@ -8,6 +8,7 @@ export const Container = styled.div`
 
 export const Main = styled.div`
   display: flex;
+  max-width: 1000px;
 `;
 
 export const Form = styled.form`

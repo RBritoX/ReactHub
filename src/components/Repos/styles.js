@@ -6,8 +6,9 @@ export const Reposits = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  width: 130%;
-  margin-left: 30px;
+  width: 775px;
+  min-width: 100%;
+  margin-left: 25px;
   margin-bottom: 10px;
   background: #fff;
   padding: 30px;
@@ -19,13 +20,13 @@ export const Reposits = styled.div`
     font-weight: bold;
 
     &:hover {
-      color: red;
+      color: #ff0000;
     }
   }
 
   &:hover {
     background: ${darken(0.05, '#fff')};
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     transition: all 0.3s;
   }
 `;
