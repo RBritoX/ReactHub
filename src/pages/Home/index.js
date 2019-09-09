@@ -5,7 +5,7 @@ import api from '../../services/api';
 import Profile from '../../components/Profile';
 import Repos from '../../components/Repos';
 
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub, FaSearch } from 'react-icons/fa';
 
 import { Container, Form, Main } from './styles';
 
@@ -56,6 +56,10 @@ class Home extends Component {
             placeholder="Digite o nome de um usuário..."
             required
           />
+
+          <button type="submit">
+            <FaSearch />
+          </button>
         </Form>
         {this.state.user.length !== 0 ? this.renderProfile() : null}
       </Container>

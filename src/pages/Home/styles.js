@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { darken } from 'polished';
 
 export const Container = styled.div`
   max-width: 1000px;
@@ -36,5 +37,26 @@ export const Form = styled.form`
     padding: 0 20px;
     border: 1px solid #eee;
     border-radius: 5px;
+  }
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: cyan;
+    width: 50px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    padding: 0 5px;
+    margin-left: 15px;
+
+    &:hover {
+      background: ${darken(0.05, 'cyan')};
+    }
+
+    svg {
+      font-size: 20px;
+    }
   }
 `;
