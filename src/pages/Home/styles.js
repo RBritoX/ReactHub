@@ -7,8 +7,9 @@ export const Container = styled.div`
 `;
 
 export const Main = styled.div`
-  display: flex;
-  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 200px auto;
+  grid-gap: 30px;
 `;
 
 export const Form = styled.form`

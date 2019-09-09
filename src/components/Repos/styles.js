@@ -6,9 +6,6 @@ export const Reposits = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  width: 775px;
-  min-width: 100%;
-  margin-left: 25px;
   margin-bottom: 10px;
   background: #fff;
   padding: 30px;

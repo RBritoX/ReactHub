@@ -7,8 +7,6 @@ export const Perfil = styled.div`
   justify-content: center;
   align-items: center;
 
-  width: 200px;
-  min-width: 100%;
   background: #fff;
   padding: 30px;
   border-radius: 10px;
