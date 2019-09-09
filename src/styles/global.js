@@ -27,7 +27,7 @@ export default createGlobalStyle`
   }
 
   body, input, button {
-    font: 1.5rem 'Montserrat', Arial, Helvetica, sans-serif;
+    font: 1.4rem 'Montserrat', Arial, Helvetica, sans-serif;
   }
 
   li {
