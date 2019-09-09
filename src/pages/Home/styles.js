@@ -8,7 +8,7 @@ export const Container = styled.div`
 
 export const Main = styled.div`
   display: grid;
-  grid-template-columns: 200px auto;
+  grid-template-columns: 200px 1fr;
   grid-gap: 30px;
 `;
 
