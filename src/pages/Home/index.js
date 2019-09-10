@@ -13,15 +13,17 @@ class Home extends Component {
   state = {
     user: [],
     repos: [],
+    sort: 'created: asc',
   };
 
   getUser = e => {
     const user = e.target.value;
+    const { sort } = this.state;
 
     api.get(`users/${user}`).then(({ data }) => this.setState({ user: data }));
 
     api
-      .get(`users/${user}/repos`)
+      .get(`users/${user}/repos?sort=${sort}`)
       .then(({ data }) => this.setState({ repos: data }));
   };
 

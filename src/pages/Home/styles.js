@@ -10,14 +10,14 @@ export const Container = styled.div`
 export const Main = styled.div`
   display: grid;
   grid-template-columns: 200px 1fr;
-  grid-gap: 30px;
+  grid-gap: 20px;
 `;
 
 export const Form = styled.form`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 50px 0 30px;
+  margin: 50px 0 20px;
   padding: 30px;
   border-radius: 10px;
   background: #fff;
@@ -43,16 +43,18 @@ export const Form = styled.form`
     display: flex;
     justify-content: center;
     align-items: center;
-    background: cyan;
+    background: #eee;
     width: 50px;
     height: 40px;
     border: none;
     border-radius: 5px;
     padding: 0 5px;
     margin-left: 15px;
+    transition: all 0.3s;
 
     &:hover {
-      background: ${darken(0.05, 'cyan')};
+      background: ${darken(0.1, '#eee')};
+      transition: all 0.3s;
     }
 
     svg {

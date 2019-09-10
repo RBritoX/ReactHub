@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import { FaFolder, FaUsers, FaUserFriends } from 'react-icons/fa';
 
-import { Perfil, ListProfile, Bio } from './styles';
+import { Perfil, ListProfile, Bio, LinkGit } from './styles';
 
 export default function Profile({ user }) {
   return (
@@ -12,34 +11,58 @@ export default function Profile({ user }) {
 
       <Bio>
         <h1>{user.name}</h1>
+        <p>{user.login}</p>
       </Bio>
       <ListProfile>
         <li>
-          <p>
-            <FaFolder />
-            Repositories
-          </p>
-          <span>{user.public_repos}</span>
+          <div>
+            <span>
+              <FaFolder />
+            </span>
+            <a
+              href={`https://github.com/${user.login}/repositories`}
+              target="_blank"
+            >
+              Repositories
+            </a>
+          </div>
+          <strong>{user.public_repos}</strong>
         </li>
         <li>
-          <p>
-            <FaUsers />
-            Followers
-          </p>
-          <span>{user.followers}</span>
+          <div>
+            <span>
+              <FaUsers />
+            </span>
+            <a
+              href={`https://github.com/${user.login}/followers`}
+              target="_blank"
+            >
+              Followers
+            </a>
+          </div>
+          <strong>{user.followers}</strong>
         </li>
         <li>
-          <p>
-            <FaUserFriends />
-            Following
-          </p>
-          <span>{user.following}</span>
+          <div>
+            <span>
+              <FaUserFriends />
+            </span>
+            <a
+              href={`https://github.com/${user.login}/following`}
+              target="_blank"
+            >
+              Following
+            </a>
+          </div>
+          <strong>{user.following}</strong>
         </li>
       </ListProfile>
 
-      <Link to={user.html_url} target="_blank">
-        Ver Perfil
-      </Link>
+      <LinkGit>
+        <a href={user.html_url} target="_blank">
+          Ver Perfil
+        </a>
+      </LinkGit>
     </Perfil>
   );
 }

@@ -32,7 +32,21 @@ export const Badges = styled.div`
   display: flex;
   align-items: center;
 
+  span {
+    font-size: 12px;
+  }
+
   span svg {
     margin: 0 5px 0 15px;
+  }
+
+  .stars svg {
+    color: yellow;
+  }
+  .watch svg {
+    color: blue;
+  }
+  .forks svg {
+    color: green;
   }
 `;

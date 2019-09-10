@@ -14,6 +14,18 @@ export default createGlobalStyle`
     font-size: 62.5%; /* 1rem = 10px */
   }
 
+  @media (max-width: 1080px) {
+    html {
+      font-size: 58%;
+    }
+  }
+
+  @media (max-width: 720px) {
+    html {
+      font-size: 54%;
+    }
+  }
+
   html,
   body {
     min-width: 100%;

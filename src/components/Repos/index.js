@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import { FaStar, FaEye, FaCodeBranch } from 'react-icons/fa';
 
@@ -8,22 +7,22 @@ import { Reposits, Badges } from './styles';
 export default function Profile({ repo }) {
   return (
     <Reposits>
-      <Link to={repo.html_url} target="_blank">
+      <a href={repo.html_url} target="_blank">
         {repo.name}
-      </Link>
+      </a>
 
       <Badges>
-        <span>
+        <span className="stars">
           <FaStar />
-          Stars: {repo.stargazers_count}
+          Stars: <strong>{repo.stargazers_count}</strong>
         </span>
-        <span>
+        <span className="watch">
           <FaEye />
-          Watch: {repo.watchers_count}
+          Watch: <strong>{repo.watchers_count}</strong>
         </span>
-        <span>
+        <span className="forks">
           <FaCodeBranch />
-          Forks: {repo.forks_count}
+          Forks: <strong>{repo.forks_count}</strong>
         </span>
       </Badges>
     </Reposits>
